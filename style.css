@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background: url('asset/fondo.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#menu {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 4em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
+  color: #ffe066;
+  animation: bounceIn 1s ease-out;
+}
+
+#startButton {
+  background-color: #ff9900;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  animation: pulse 1.5s infinite;
+}
+
+#startButton:hover {
+  background-color: #ff6600;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.8);
+}
+
+#game-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  display: block;
+  width: 100%; /* Llenar todo el ancho */
+  height: 100%; /* Llenar todo el alto */
+  object-fit: cover; /* Asegurar que se cubra completamente sin distorsión */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
